@@ -1,21 +1,21 @@
 development:
   db:
-    uri: "mongodb://localhost/noobjs_development"
+    uri: "mongodb://localhost/elleol_development"
   facebook:
-    appId: "363663163645036"
-    appSecret: "9c3c0bde2389f7ec7ccfaeba3b49ec32"
+    appId: "265238776923880"
+    appSecret: "afae4c41242967d8e440e24368cbbdf4"
     host_uri: "http://localhost:3000"
 staging:
   db:
-    uri: "mongodb://localhost/noobjs_staging"
+    uri: "mongodb://localhost/elleol_staging"
   facebook:
-    appId: "202263326537254"
-    appSecret: "f12d943a863da7bd6d27823355769ec5"
+    appId: "265238776923880"
+    appSecret: "afae4c41242967d8e440e24368cbbdf4"
     host_uri: "http://localhost:3000"
 production:
   db:
-    uri: "mongodb://madhums:madhums@staff.mongohq.com:10097/app2695805"
+    uri: "mongodb://delorenj:Iree3cam@flame.mongohq.com:27059/app5538702"
   facebook:
-    appId: "202263326537254"
-    appSecret: "f12d943a863da7bd6d27823355769ec5"
-    host_uri: "http://nodejs-express-demo.herokuapp.com"
+    appId: "419178718128096"
+    appSecret: "4716f5c51f87e23ed0679feab5d6ef2a"
+    host_uri: "http://www.elleol.com"

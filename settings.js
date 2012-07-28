@@ -51,7 +51,7 @@ function bootApplication(app) {
     // cookieParser should be above session
     app.use(express.cookieParser())
     app.use(express.session({
-      secret: 'noobjs',
+      secret: 'ballsucker',
       store: new mongoStore({
         url: config.db.uri,
         collection : 'sessions'
@@ -64,11 +64,6 @@ function bootApplication(app) {
     // app.use(app.router)
     app.use(mongooseAuth.middleware())
   })
-
-  // Setup ejs views as default, with .html as the extension
-  //app.set('views', __dirname + '/views')
-  //app.register('.html', require('ejs'))
-  //app.set('view engine', 'html')
 
   // Some dynamic view helpers
   app.dynamicHelpers({
@@ -95,41 +90,14 @@ function bootApplication(app) {
     },
 
     appName : function(req, res) {
-      return 'nodejs express mongoose demo'
+      return 'ElleOL Designs'
     },
 
     slogan : function(req,res) {
-      return 'nodejs express mongoose demo'
+      return 'Unique invitations for unique events'
     }
 
   })
-
-
-  // Use stylus for css templating
-
-  // completely optional, however
-  // the compile function allows you to
-  // define additional functions exposed to Stylus,
-  // alter settings, etc
-
-  /*function compile(str, path) {
-    return stylus(str)
-      .set('filename', path)
-      .set('warn', true)
-      .set('compress', true)
-   // .define('url', stylus.url({ paths: [__dirname + '/public/images'], limit:1000000 }))
-  }*/
-
-  // add the stylus middleware, which re-compiles when
-  // a stylesheet has changed, compiling FROM src,
-  // TO dest. dest is optional, defaulting to src
-
-  /*app.use(stylus.middleware({
-      debug: true
-    , src: __dirname + '/stylus'
-    , dest: __dirname + '/public'
-    , compile: compile
-  }))*/
 
   // Don't use express errorHandler as we are using custom error handlers
   // app.use(express.errorHandler({ dumpExceptions: false, showStack: false }))

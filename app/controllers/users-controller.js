@@ -13,6 +13,10 @@ module.exports = function (app, auth) {
       })
   })
 
+  app.get('/login', function(req, res){
+    res.render('users/login', { title: "ElleOL Login", user: req.user, message: req.flash('error') });
+  });
+
   // Handles session Logout
   app.get('/logout', function (req, res) {
     req.logout()
