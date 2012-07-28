@@ -17,6 +17,12 @@ body {
   font-size: 24px;
 }
 
+.price {
+	margin: 12px;
+	color: green;
+	font-weight: bold;
+}
+
 ul.cards {
     display: inline;
 }
