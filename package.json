@@ -1,25 +1,21 @@
 {
-    "name": "noobjs"
-  , "description": "A demo app in nodejs illustrating use of express, jade and mogoose"
-  , "version": "2.2.0"
+    "name": "nodesy"
+  , "version": "0.0.2"
   , "private": true
-  , "author": "Madhusudhan M S (http://github.com/madhums)"
-  , "engines": {
-        "node": "0.6.18"
-      , "npm": "1.1.9"
-    }
-  , "scripts": {
-      "start": "./node_modules/.bin/nodemon app.js"
-    }
   , "dependencies": {
-      "express" : "2.5.11"
-    , "jade"    : "0.20.0"
-    , "mongoose": "2.7.1"
-    , "gzippo" : "0.1.7"
+      "express": "2.5.11"
+    , "jade": "latest"
+    , "formidable": "latest"
+    , "yaml": "latest"
+    , "mongoose": ">= 2.7.1"
+    , "gzippo" : "0.1.7"  
     , "yaml-config" : "0.1.0"
-    , "connect-mongodb" : "1.1.2"
     , "mongoose-auth" : "0.0.11"
     , "everyauth" : "0.2.29"
     , "nodemon": "latest"
+  }
+  , "engines": {
+        "node": "0.6.18"
+      , "npm": "1.1.9"
   }
 }
