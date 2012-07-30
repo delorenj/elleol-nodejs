@@ -5,6 +5,7 @@ var express = require('express')
   , fs = require('fs')
   , utils = require('./lib/utils')
   , auth = require('./authorization')
+  , form = require('connect-form')
 
 // Load configurations
 var config_file = require('yaml-config')
@@ -22,8 +23,13 @@ model_files.forEach(function (file) {
     require(models_path+'/'+file)
 })
 
-var app = express.createServer()       // express app
+var app = express.createServer(
+  form({ keepExtensions: true })
+)
+
 require('./settings').boot(app)        // Bootstrap application settings
+app.use(express.logger());
+app.use(express.bodyParser());
 
 // Bootstrap controllers
 var controllers_path = __dirname + '/app/controllers'
